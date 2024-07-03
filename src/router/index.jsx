@@ -1,41 +1,40 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout.jsx";
 import HomePage from "../pages/HomePage/HomePage.jsx";
-import App from "../pages/AppPage/AppPage.jsx";
-import Form from "../pages/FormPage/FormPage.jsx";
-import Legend from "../pages/LegendPage/LegendPage.jsx";
-import AboutUs from "../pages/AboutPage/AboutPage.jsx";
-import List from "../pages/ListPage/ListPage.jsx";
+import AppPage from "../pages/AppPage/AppPage.jsx";
+import FormPage from "../pages/FormPage/FormPage.jsx";
+import AboutPage from "../pages/AboutPage/AboutPage.jsx";
+import ListPage from "../pages/ListPage/ListPage.jsx";
+import LegendPage from "../pages/LegendPage/LegendPage.jsx";
 
 export const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
   {
-    path: "pages/",
+    path: "/",
     element: <Layout />,
     children: [
       {
-        path: "Home",
+        path: "/Home",
         element: <HomePage />,
       },
       {
-        path: "App",
-        element: <App />,
+        path: "/App",
+        element: <AppPage />,
       },
       {
-        path: "Form",
-        element: <Form />,
+        path: "/Form",
+        element: <FormPage />,
       },
       {
-        path: "Legend",
-        element: <Legend />,
+        path: "/Legend",
+        element: <LegendPage />,
       },
       {
-        path: "AboutUs",
-        element: <AboutUs />,
+        path: "/AboutUs",
+        element: <AboutPage />,
       },
       {
-        path: "List",
-        element: <List />,
+        path: "/List",
+        element: <ListPage />,
       },
     ],
   },
