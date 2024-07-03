@@ -1,24 +1,28 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
 
-const useApi = (url) => {
-  const [data, setData] = useState(undefined);
+import { token, BASE_URL } from "../utils/urls";
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get(url);
-        const jsonData = await response.data;
-        setData(jsonData);
-      } catch (error) {
-        console.error(`Error fetching data: ${error}`);
-      }
-    };
+const useApi = async (city) => {
+  const url = `${BASE_URL}/feed/${city}/?token=${token}`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const result = await response.json();
 
-    getData();
-  }, [url]);
+    const pollutionIndex = result.data.aqi;
+    const iaqi = result.data.iaqi;
+    const pm25Value = iaqi.pm25 ? iaqi.pm25.v : 'N/A';
+    const pm10Value = iaqi.pm10 ? iaqi.pm10.v : 'N/A';
+    const o3Value = iaqi.o3 ? iaqi.o3.v : 'N/A';
 
-  return data;
+    const data = { pollutionIndex, pm25Value, pm10Value, o3Value };
+    return data;
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw error;
+  }
 };
 
 export default useApi;
