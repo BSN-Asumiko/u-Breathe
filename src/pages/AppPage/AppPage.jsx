@@ -1,8 +1,10 @@
-// AppPage.js
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CatalunyaMap from './Map/CatalunyaMap';
-import useApi from '../../services/useApi'; // Adjust path as per your project structure
+import useApi from '../../services/useApi'; 
+import DataComponent from './DataComponent/DataComponent';
+import CurrentDate from './CurrentDate/CurrentDate';
+import "./appPage.css"
 
 const AppPage = () => {
   const [selectedCity, setSelectedCity] = useState(null);
@@ -25,22 +27,21 @@ const AppPage = () => {
 
   return (
     <div className="wrapper">
-      <section className="map-section">
-        <p>Date</p>
+      <section>
+        <CurrentDate />
         <div className="map">
           <CatalunyaMap onSelectCity={handleCitySelect} />
         </div>
       </section>
       <section className="data-section">
-        {loading && <p>Loading...</p>}
+        {loading && <p className='loader'>Loading...</p>}
         {error && <p>Error: {error}</p>}
         {data && (
-          <div>
-            <h2>Data for {selectedCity}</h2>
-            <p>Pollution Index: {data.pollutionIndex}</p>
-            <p>PM2.5: {data.pm25Value}</p>
-            <p>PM10: {data.pm10Value}</p>
-            <p>O3: {data.o3Value}</p>
+          <div className='data-wrapper'>
+            <DataComponent index={data.pollutionIndex} text={selectedCity} className="capital-name"/>
+            <DataComponent index={data.pm25Value} text="pm 2.5"/>
+            <DataComponent index={data.pm10Value} text="pm 10"/>
+            <DataComponent index={data.o3Value} text="o3"/>
           </div>
         )}
       </section>
