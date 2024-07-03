@@ -1,0 +1,56 @@
+nav, .navbar-app {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    background-color: var(--lightBlue);
+}
+
+.navbar-logo {
+    margin-right: 0.5rem;
+}
+
+.navbar-name {
+    font-size: 1.3em;
+}
+
+.logo-image {
+    width: 3rem;
+}
+
+.menu-icon {
+    width: 2.5rem;
+}
+
+.menu {
+    display: none;
+    list-style: none;
+    width: 90%;
+    margin: auto;
+    gap: 1rem;
+    transition: all 0.3s;
+    position: absolute;  
+    top: 60px;  
+    right: 1rem;
+    background-color: var(--lightBlue); 
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.menu.open {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li {
+    font-size: 1.3em;
+    background-color: var(--white);
+    padding: 0.5em;
+}
+

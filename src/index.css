@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   font-family: Poppins, sans-serif;
+  list-style: none;
+  
 }
 
 :root {
@@ -15,3 +17,12 @@
   --yellow: #f0f271;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+  background: none;
+}
