@@ -3,9 +3,9 @@ import "./homePage.css";
 const HomePage = () => {
 
     return (
-    <>
+    <main>
 
-    </>
+    </main>
     )
 }
 
