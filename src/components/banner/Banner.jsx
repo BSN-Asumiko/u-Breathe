@@ -1,12 +1,13 @@
-// components/Banner.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./banner.css";
 
 const images = [
-  { src: "assets/images/qualityAir.avif", link: "/AppPage" },
-  { src: "path/to/image2.jpg", link: "/AppPage" },
-  { src: "path/to/image3.jpg", link: "/FormPage" },
+  { src: "assets/images/map-catalunya.svg", link: "/Home" },
+  { src: "/assets/images/data.jpeg", link: "/Legend" },
+  { src: "/assets/images/checkList.avif", link: "/Form" },
   { src: "/assets/images/us.avif", link: "/AboutUs" },
+  { src: "assets/images/legend.jpeg", link: "/List" },
 ];
 
 const Banner = () => {
@@ -21,6 +22,7 @@ const Banner = () => {
   }, []);
 
   const handleClick = () => {
+    console.log("Navigating to:", images[currentIndex].link);
     navigate(images[currentIndex].link);
   };
 

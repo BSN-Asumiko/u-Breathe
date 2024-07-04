@@ -1,9 +1,17 @@
-#banner {
-  margin: 10%;
-  height: 30%;
+.banner {
+  width: 90%;
+  height: 15em;
+  overflow: hidden;
+  position: relative;
+  margin: 1em 1em 1em 1.25em;
+  background-color: rgb(244, 247, 248);
 }
 
-#banner img {
-  width: 100%;
-  cursor: pointer;
+.banner img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  position: absolute;
+  top: 0.7em;
+  left: 0;
 }
