@@ -1,9 +1,13 @@
+import Title from "../../components/title/Title";
 
+import React from "react";
 
 const FormPage = () => {
   return (
-    <div>Disculpa, esta sección está en desarollo</div>
-  )
-}
+    <>
+      <Title text="Añade tus datos!" />
+    </>
+  );
+};
 
-export default FormPage
+export default FormPage;
