@@ -1,4 +1,4 @@
-import DisaseList from "../../components/disease/DisaseList";
+import DisaseList from "../../components/disease/DiseaseList";
 
 import React from 'react'
 
