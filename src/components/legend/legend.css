@@ -10,7 +10,6 @@
 .legend {
     border-radius: 0.5em;
     border-bottom: 20px;
-    background-color: var(--lightGrey);
     text-align: center;
     justify-content: space-around;
     margin-bottom: 20px;
@@ -18,4 +17,16 @@
     padding-bottom: 15px;
     padding: 15px 10px 15px 10px;
 
+}
+
+.legend1 {
+    background-color: var(--green);
+}
+
+.legend2 {
+    background-color: var(--yellow);
+}
+
+.legend3 {
+    background-color: var(--red);
 }

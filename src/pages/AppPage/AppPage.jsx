@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import CatalunyaMap from "../../components/Map/CatalunyaMap";
-import useApi from "../../services/useApi";
-import DataComponent from "../../components/DataComponent/DataComponent";
-import CurrentDate from "../../components/CurrentDate/CurrentDate";
+import { useState, useEffect } from 'react';
+import CatalunyaMap from '../../components/Map/CatalunyaMap';
+import useApi from '../../services/useApi'; 
+import DataComponent from '../../components/DataComponent/DataComponent';
+import CurrentDate from '../../components/CurrentDate/CurrentDate';
+import DiseasesSection from '../../components/DiseasesSection/DiseasesSection';
 import "./appPage.css";
-import DiseasesSection from "../../components/DiseasesSection/DiseasesSection";
 
 const AppPage = () => {
-  const [selectedCity, setSelectedCity] = useState("Barcelona");
+  const [selectedCity, setSelectedCity] = useState('Barcelona'); 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -39,7 +39,7 @@ const AppPage = () => {
     };
 
     fetchInitialData();
-  }, []);
+  }, []); 
 
   return (
     <div className="appPage-wrapper">
