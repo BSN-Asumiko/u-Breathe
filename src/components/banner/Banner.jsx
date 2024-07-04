@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./banner.css";
 
 const images = [
-  { src: "assets/images/map-catalunya.svg", link: "/Home" },
+  { src: "assets/images/map-catalunya.svg", link: "/App" },
   { src: "/assets/images/data.jpeg", link: "/Legend" },
   { src: "/assets/images/checkList.avif", link: "/Form" },
   { src: "/assets/images/us.avif", link: "/AboutUs" },
