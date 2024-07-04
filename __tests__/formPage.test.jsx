@@ -7,7 +7,6 @@ describe("FormPage", () => {
   it("should submit the form successfully", async () => {
     const { getByLabelText, getByText, getByRole } = render(<FormPage />);
 
-    // Simular la entrada de datos en los campos del formulario
     fireEvent.change(getByLabelText(/Nombre de la enfermedad/i), {
       target: { value: "Neumonía" },
     });
@@ -23,10 +22,8 @@ describe("FormPage", () => {
       },
     });
 
-    // Simular el envío del formulario
     fireEvent.click(getByRole("button", { name: /submit/i }));
 
-    // Esperar a que el mensaje de éxito aparezca
     await waitFor(() => {
       expect(getByText("¡Enviado!")).toBeInTheDocument();
     });
