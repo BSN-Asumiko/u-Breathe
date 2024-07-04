@@ -17,6 +17,7 @@ describe("Card Component", () => {
     imageSrc: "/test/image.png",
     text: "Test external link",
     link: "https://example.com",
+    title: "Hola",
   };
 
   it("renders internal link correctly", () => {
