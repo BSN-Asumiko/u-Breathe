@@ -1,12 +1,15 @@
-import DisaseList from "../../components/disease/DiseaseList";
-
 import React from 'react'
+import DisaseList from "../../components/disease/DiseaseList";
+import Title from "../../components/title/Title";
+
+
 
 const ListPage = () => {
   return (
     <div>
-        <h1>enfermedades</h1>
+    <Title text="Lista de enfermedades"/>
     <DisaseList/>
+    
     </div>
   )
 }

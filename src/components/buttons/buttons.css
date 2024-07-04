@@ -1,0 +1,11 @@
+  .button {
+    background-color: var(--lightGrey);
+    border-bottom: 15px;
+    padding: 10px 30px;
+    border-radius: 0.2em;
+    cursor: pointer;
+    width: 25%;
+    
+  }
+  
+  

@@ -11,6 +11,8 @@
     margin-bottom: 1em;
     line-height: 1.5;
     text-align: justify;
+
+    
   }
   
   .nameTitle {
@@ -20,7 +22,7 @@
     padding-left: 1em;
     text-indent: -1em;
     list-style-type: disc;
-   
+   margin-right: 0.5em;
   display: inline-block;
   
   }
@@ -29,6 +31,15 @@
     background-color: #ecf0f1;
     border-radius: 8px;
     padding: 1em;
-    margin: 1em 0;
+    margin: 1em 2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 3em;
+  }
+  .containerButton {
+    display: flex;
+   justify-content: space-around;
+   margin-top: 3em;
+   margin-bottom: 7em;
+
+
   }
