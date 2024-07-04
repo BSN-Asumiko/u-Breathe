@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import CatalunyaMap from "./Map/CatalunyaMap";
+import CatalunyaMap from "../../components/Map/CatalunyaMap";
 import useApi from "../../services/useApi";
-import DataComponent from "./DataComponent/DataComponent";
-import CurrentDate from "./CurrentDate/CurrentDate";
+import DataComponent from "../../components/DataComponent/DataComponent";
+import CurrentDate from "../../components/CurrentDate/CurrentDate";
 import "./appPage.css";
-import DiseasesSection from "./DiseasesSection/DiseasesSection";
+import DiseasesSection from "../../components/DiseasesSection/DiseasesSection";
 
 const AppPage = () => {
-  const [selectedCity, setSelectedCity] = useState("Barcelona"); // Set initial city to Barcelona
+  const [selectedCity, setSelectedCity] = useState("Barcelona");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
