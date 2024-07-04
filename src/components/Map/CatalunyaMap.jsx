@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CatalunyaMap.css';
-import useApi from '../../../services/useApi';
-import { cities } from '../../../utils/cities';
+import useApi from '../../services/useApi';
+import { cities } from '../../utils/cities';
 
 const CatalunyaMap = ({ onSelectCity }) => {
   const [selectedCity, setSelectedCity] = useState(null);
