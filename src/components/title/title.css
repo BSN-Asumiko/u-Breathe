@@ -1,0 +1,14 @@
+#title {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  background-color: var(--lightBlue);
+  border: none;
+  border-radius: 0.2em;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+}
