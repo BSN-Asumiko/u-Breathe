@@ -1,0 +1,35 @@
+.card {
+    width: 80%;
+    margin: auto;
+    margin-top: 1em;
+    display: flex;
+    gap: 2em;
+    background-color: var(--lightGrey);
+    align-items: center;
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+.card:last-of-type {
+    margin-bottom: 3em;
+}
+
+.avatar {
+    width: 20cqw;
+    height: 20cqw;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 1.2em;
+}
+
+.user-rol {
+    font-size: 1em;
+}
+
+.user-link {
+font-size: 1em;
+color: var(--blue);
+text-decoration: underline;
+}

@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import diseasesData from '../../../utils/diseasesData'; 
+import diseasesData from '../../utils/diseasesData'; 
 import "./diseasesSection.css" 
 
 const DiseasesSection = () => {
