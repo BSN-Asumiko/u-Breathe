@@ -1,0 +1,45 @@
+.titleDisease{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+  }
+  
+  .text {
+    font-size: 1em;
+    color: #16a085;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    text-align: justify;
+
+    
+  }
+  
+  .nameTitle {
+    font-size: 1.3em;
+    color: #34495e;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    text-indent: -1em;
+    list-style-type: disc;
+   margin-right: 0.5em;
+  display: inline-block;
+  
+  }
+  
+  .container {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 3em;
+  }
+  .containerButton {
+    display: flex;
+   justify-content: space-around;
+   margin-top: 3em;
+   margin-bottom: 7em;
+
+
+  }

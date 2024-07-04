@@ -1,0 +1,18 @@
+
+.text-title {
+    width: 80%;
+    margin: auto;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+.project-description {
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5em;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.3em;
+    font-size: 0.9em;
+}
