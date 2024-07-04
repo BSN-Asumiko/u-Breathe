@@ -7,6 +7,7 @@
     padding: 0.3em;
     background-color: var(--lightGrey);
     margin-bottom: 0.5em;
+    border-radius: 0.2em;
 }
 
 .index-wrapper {
@@ -21,7 +22,7 @@
     margin-left: 1em;
 }
 
-p {
+.data-text {
     font-size: 1.1em;
     font-weight: 500;
 }

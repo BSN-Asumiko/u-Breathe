@@ -6,7 +6,7 @@ const DataComponent = ({ index, text, className }) => {
             <div className="index-wrapper">
                 <p>{index}</p>
             </div>
-            <p>{text}</p>
+            <p className="data-text">{text}</p>
         </div>
     )
 }
