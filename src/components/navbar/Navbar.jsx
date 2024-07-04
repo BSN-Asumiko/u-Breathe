@@ -26,7 +26,7 @@ const Navbar = () => {
           <img src="/assets/icons/menu-icon.svg" alt="burger menu icon" className="menu-icon" />
         </button>
         <ul className={isOpen ? 'menu open' : 'menu'}>
-        <li><NavLink to="/Home" onClick={closeMenu}>Inicio</NavLink></li>
+          <li><NavLink to="/Home" onClick={closeMenu}>Inicio</NavLink></li>
           <li><NavLink to="/App" onClick={closeMenu}>App</NavLink></li>
           <li><NavLink to="/Legend" onClick={closeMenu}>Leyenda</NavLink></li>
           <li><NavLink to="/AboutUs" onClick={closeMenu}>Sobre Nosotros</NavLink></li>
