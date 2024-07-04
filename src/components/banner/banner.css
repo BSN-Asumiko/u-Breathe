@@ -1,0 +1,9 @@
+#banner {
+  margin: 10%;
+  height: 30%;
+}
+
+#banner img {
+  width: 100%;
+  cursor: pointer;
+}

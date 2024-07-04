@@ -1,12 +1,14 @@
 import "./homePage.css";
 
+import React from "react";
+import Banner from "../../components/banner/Banner";
+
 const HomePage = () => {
+  return (
+    <div>
+      <Banner />
+    </div>
+  );
+};
 
-    return (
-    <main>
-
-    </main>
-    )
-}
-
-export default HomePage
+export default HomePage;
