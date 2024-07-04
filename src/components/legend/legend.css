@@ -1,0 +1,21 @@
+.containerLegend {
+    flex-direction: column;
+    margin: auto;
+    display: flex;
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+
+}
+.legend {
+    border-radius: 0.5em;
+    border-bottom: 20px;
+    background-color: var(--lightGrey);
+    text-align: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding: 15px 10px 15px 10px;
+
+}
