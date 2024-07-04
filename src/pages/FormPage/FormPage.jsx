@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Title from "../../components/title/Title";
 import FormInput from "../../components/formInput/FormInput";
 import "./formpages.css";
 
 const FormPage = () => {
+  const [submitted, setSubmitted] = useState(false);
   const {
     register,
     handleSubmit,
@@ -13,6 +14,10 @@ const FormPage = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 2000);
   };
 
   return (
@@ -45,6 +50,8 @@ const FormPage = () => {
 
         <input id="submit" type="submit" />
       </form>
+
+      {submitted && <div className="submission-popup">¡Enviado!</div>}
     </>
   );
 };

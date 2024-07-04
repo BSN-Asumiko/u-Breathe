@@ -66,3 +66,26 @@ textarea {
   border-radius: 0.2em;
   border: var(--blue) solid 1px;
 }
+.popup::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #f8d7da transparent;
+}
+
+.submission-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  z-index: 20;
+}

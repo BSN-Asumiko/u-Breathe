@@ -5,11 +5,11 @@
   font-family: Poppins, sans-serif;
   list-style: none;
   color: black;
-
 }
 
 :root {
   --white: #e5eaeb;
+  --lightGrey: #d1e5f3;
   --lightGrey: #d1e5f3;
   --grey: #4e4e4e;
   --lightBlue: #a6d5f6;
