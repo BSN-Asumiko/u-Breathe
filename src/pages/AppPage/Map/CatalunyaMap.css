@@ -1,0 +1,30 @@
+.map-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .map-image {
+    width: 100%;
+    display: block;
+  }
+  
+  .city-point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--lightBlue);
+    cursor: pointer;
+  }
+  
+  .city-point.selected {
+    background-color: var(--blue);
+  }
+  
+  .idCity {
+    font-size: 0.7em;
+    margin-top: 1.2em
+  }
+  
