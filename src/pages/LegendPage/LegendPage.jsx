@@ -1,9 +1,14 @@
+import React from 'react';
+import Legend from '../../components/legend/Legend';
+
 
 
 const LegendPage = () => {
   return (
-    <div>Disculpa, esta sección está en desarollo</div>
-  )
-}
+    
+      <Legend  />
+
+  );
+};
 
 export default LegendPage
