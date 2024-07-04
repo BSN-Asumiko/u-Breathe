@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import diseasesData from '../../../utils/diseasesData'; 
+import listDisease from '../../utils/dataDisease';
 import "./diseasesSection.css" 
 
 const DiseasesSection = () => {
@@ -12,7 +12,7 @@ const DiseasesSection = () => {
 
     useEffect(() => {
         // Fetch data from the imported array
-        setDiseases(diseasesData);
+        setDiseases(listDisease);
     }, []);
 
     const handleChange = (event) => {
@@ -23,7 +23,7 @@ const DiseasesSection = () => {
         if (selectedDiseaseDetails) {
             setDiseaseDetails({
                 description: selectedDiseaseDetails.description,
-                recommendation: selectedDiseaseDetails.recommendation
+                recommendation: selectedDiseaseDetails.recommendations
             });
         } else {
             setDiseaseDetails({
@@ -35,15 +35,15 @@ const DiseasesSection = () => {
 
     return (
         <section className="diseases-section">
-            <label htmlFor="selectDisease" className="diseases-label">Select Disease:</label>
+            <label htmlFor="selectDisease" className="diseases-label">Selecciona enfermedad:</label>
             <select name="selectDisease" id="selectDisease" value={selectedDisease} onChange={handleChange}>
                 <option value="">--Please choose an option--</option>
                 {diseases.map(disease => (
                     <option key={disease.name} value={disease.name}>{disease.name}</option>
                 ))}
             </select>
-            <p className="disease-text">{diseaseDetails.description}</p>
-            <p className="disease-text">{diseaseDetails.recommendation}</p>
+            <p className="disease-text"><span className='disease-title'>Descripción: </span>{diseaseDetails.description}</p>
+            <p className="disease-text"><span className='disease-title'>Recomendaciones: </span>{diseaseDetails.recommendation}</p>
         </section>
     );
 };
