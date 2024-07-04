@@ -10,6 +10,7 @@ describe("Card Component", () => {
     imageSrc: "/test/image.png",
     text: "Test internal link",
     link: "/about",
+    title: "Sobre nosotros",
   };
 
   const cardDataExternal = {
