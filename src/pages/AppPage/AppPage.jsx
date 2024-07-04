@@ -1,13 +1,13 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CatalunyaMap from './Map/CatalunyaMap';
 import useApi from '../../services/useApi'; 
 import DataComponent from './DataComponent/DataComponent';
 import CurrentDate from './CurrentDate/CurrentDate';
-import "./appPage.css"
+import "./appPage.css";
+import DiseasesSection from './DiseasesSection/DiseasesSection';
 
 const AppPage = () => {
-  const [selectedCity, setSelectedCity] = useState(null);
+  const [selectedCity, setSelectedCity] = useState('Barcelona'); // Set initial city to Barcelona
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -25,14 +25,31 @@ const AppPage = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchInitialData = async () => {
+      setLoading(true);
+      try {
+        const fetchedData = await useApi('Barcelona');
+        setData(fetchedData);
+        setLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
+    fetchInitialData();
+  }, []); // Empty dependency array to run only once on mount
+
   return (
-    <div className="wrapper">
+    <div className="appPage-wrapper">
       <section>
         <CurrentDate />
         <div className="map">
           <CatalunyaMap onSelectCity={handleCitySelect} />
         </div>
       </section>
+      <h3 className="data-title">Datos de contaminación:</h3>
       <section className="data-section">
         {loading && <p className='loader'>Loading...</p>}
         {error && <p>Error: {error}</p>}
@@ -45,7 +62,7 @@ const AppPage = () => {
           </div>
         )}
       </section>
-      <section className="desease-section"></section>
+      <DiseasesSection/>
     </div>
   );
 };
