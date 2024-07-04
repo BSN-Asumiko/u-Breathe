@@ -1,0 +1,27 @@
+.component-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    margin: auto;
+    padding: 0.3em;
+    background-color: var(--lightGrey);
+    margin-bottom: 0.5em;
+}
+
+.index-wrapper {
+    width: 2.81em;
+    height: 2.81em;
+    border-radius: 50%;
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+    margin-left: 1em;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 500;
+}

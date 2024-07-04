@@ -1,13 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import DisaseList from './components/disease/DisaseList.jsx'
-import { dataDisease } from "./utils/dataDisease.js";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { router } from "./router";
+import { RouterProvider } from "react-router-dom";
+import "./index.css"
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <DisaseList />
-    <DisaseList DisaseList={dataDisease} />
-  </React.StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  // <React.StrictMode>
+  <RouterProvider router={router} />
+  // </React.StrictMode>
+);
