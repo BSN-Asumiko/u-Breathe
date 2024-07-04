@@ -1,9 +1,8 @@
-// __tests__/card.test.jsx
 import React from "react";
 import { waitFor, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import "@testing-library/jest-dom/"; // Importante para tener las funciones como toBeInTheDocument y toHaveAttribute
-import Card from "../src/components/card/Card"; // Ajusta la ruta según tu estructura de archivos
+import "@testing-library/jest-dom/";
+import Card from "../src/components/card/Card";
 import { MemoryRouter } from "react-router-dom";
 
 describe("Card Component", () => {
@@ -50,9 +49,7 @@ describe("Card Component", () => {
     });
     userEvent.click(linkElement);
 
-    // Esperamos a que se renderice cualquier contenido visible en la página
     await waitFor(() => {
-      // Verificamos si hay algún contenido visible en la página de "About Us"
       expect(screen.getByText(/Sobre nosotros/i)).toBeInTheDocument();
     });
   });
